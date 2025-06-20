@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Invaders | Vidit Modi</title>
+    <link rel="stylesheet" href="styles/stylesheet.css" />
+</head>
+<body>
+    <header class="fade-in">
+        <h1>Vidit Modi</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="works.html">Works</a>
+            <a href="extras.html">Extras</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="project-detail fade-in">
+        <!-- Image Carousel -->
+        <div class="carousel">
+            <img class="carousel-image" src="images/game1-1.png" alt="Space Invaders 1" />
+            <img class="carousel-image" src="images/game1-2.png" alt="Space Invaders 2" />
+            <img class="carousel-image" src="images/game1-3.png" alt="Space Invaders 3" />
+            <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <!-- Play Button -->
+        <div class="play-button-container">
+            <a href="https://viditm.itch.io/space-invaders" target="_blank" class="cta-button">▶ Play on Itch.io</a>
+        </div>
+
+        <!-- Grid Layout -->
+        <div class="project-grid">
+            <!-- LEFT SIDE -->
+            <div class="project-main">
+                <h3 class="section-title"><span>ℹ️</span> Description</h3>
+                <p>
+                    Space Invaders is a retro-inspired arcade shooter built in Unity. You defend Earth by destroying waves of incoming alien ships.
+                    The game emphasizes tight controls, satisfying visuals, and a nostalgic yet modern experience.
+                </p>
+
+                <h3 class="section-title"><span>✅</span> Contributions</h3>
+                <ul>
+                    <li>Implemented enemy movement, spawning logic, and shooting patterns.</li>
+                    <li>Created player control system and power-ups using Unity C#.</li>
+                    <li>Handled UI design and game flow (menu, pause, restart).</li>
+                </ul>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="project-meta">
+                <div class="meta-block">
+                    <h4><span>📅</span> Year</h4>
+                    <p>2023</p>
+                </div>
+
+                <div class="meta-block">
+                    <h4><span>📱</span> Platform</h4>
+                    <ul>
+                        <li>Windows</li>
+                        <li>Web</li>
+                    </ul>
+                </div>
+
+                <div class="meta-block">
+                    <h4><span>⚙️</span> Engine</h4>
+                    <p><span class="highlight">Unity</span></p>
+                </div>
+
+                <div class="meta-block">
+                    <h4><span>🎮</span> Genre</h4>
+                    <p><span class="highlight">Arcade Shooter</span></p>
+                </div>
+
+                <div class="meta-block">
+                    <h4><span>🧑‍💻</span> Role</h4>
+                    <p>Solo Developer</p>
+                </div>
+
+                <div class="meta-block">
+                    <h4><span>🛠️</span> Tools Used</h4>
+                    <ul>
+                        <li>Unity</li>
+                        <li>Blender</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="fade-in">
+        <p>&copy; 2025 Vidit Modi. All rights reserved.</p>
+    </footer>
+
+    <!-- Carousel Script -->
+    <script>
+        let currentSlide = 0;
+        const images = document.querySelectorAll(".carousel-image");
+
+        function showSlide(index) {
+            images.forEach((img, i) => {
+                img.style.display = i === index ? "block" : "none";
+            });
+        }
+
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + images.length) % images.length;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

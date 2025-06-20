@@ -3,156 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Dev Portfolio</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-79E9K20R7L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-79E9K20R7L');
-</script>
+    <title>Vidit Modi | Game Developer Portfolio</title>
+    <link rel="stylesheet" href="styles/stylesheet.css">
 </head>
 <body>
-    <header>
+    <header class="fade-in">
         <h1>Vidit Modi</h1>
         <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="about.html">About</a>
+            <a href="works.html">Works</a>
+            <a href="extras.html">Extras</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero fade-in slide-in-left">
         <h2>Hi, I'm Vidit Modi</h2>
         <p>Game Developer | Unity | Unreal | Technical Artist</p>
-    </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I’m currently pursuing B.Sc. in Game Art and Design at ICAT Bangalore. I enjoy developing games using Unity and Unreal, especially tower defense and casual mobile games. I’m passionate about both gameplay and design!</p>
-        <p><a href="Vidit Modi CV.pdf" target="_blank" class="resume-button">📄 Download My Resume (PDF)</a></p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <div class="project">
-            <div class="carousel" data-images='["images/game1-1.png", "images/game1-2.png", "images/game1-3.png"]'>
-                <img class="carousel-image" src="images/game1-1.png" alt="Screenshot 1">
-                <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
-                <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
-            </div>
-            <h3>Space Shooter</h3>
-            <p>A space shooter game reimagining the classic space invaders game but in 3D.</p>
-            <a href="https://viditm.itch.io/space-invaders">Play Now</a>
-        </div>
-
-        <div class="project">
-            <div class="carousel" data-images='["images/game2-1.png", "images/game2-2.png", "images/game2-3.png"]'>
-                <img class="carousel-image" src="images/game2-1.png" alt="Screenshot 1">
-                <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
-                <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
-            </div>
-            <h3>Hexa Sort</h3>
-            <p>
-                Hexa Sort is a simple and addictive casual game which is available in play store my goal for this project was to remake the one already
-                exisitng in the playstore with the aim of understaning how it is made.
-            </p>
-            <a href="https://viditm.itch.io/hexa-sort">Play Now</a>
-        </div>
-
-        <div class="project">
-            <div class="carousel" data-images='["images/game3-1.png", "images/game3-2.png", "images/game3-3.png"]'>
-                <img class="carousel-image" src="images/game3-1.png" alt="Screenshot 1">
-                <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
-                <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
-            </div>
-            <h3>Light & Shadow Escape</h3>
-            <p>
-                Light and Shadow escape is 2D platformer game with the theme of Bane and Boon the character has the ability to switch its forms into a dark or shadow form
-                that allows it to bypass certain obstacles.
-            </p>
-            <a href="https://viditm.itch.io/light-and-shadow-escape">Play Now</a>
-        </div>
-
-        <div class="project">
-            <div class="carousel" data-images='["images/game4-1.png", "images/game4-2.png", "images/game4-3.png"]'>
-                <img class="carousel-image" src="images/game4-1.png" alt="Screenshot 1">
-                <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
-                <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
-            </div>
-            <h3>Spectator's Carnival</h3>
-            <p>
-                Spectator's Carnival is team project made for a game jam which caters to the current indian market trends,
-                the game has a mix of several carnival games.
-            </p>
-            <a href="https://viditm.itch.io/spectators-carnival">Play Now</a>
-        </div>
-
-        <div class="project">
-            <div class="carousel" data-images='["images/game7-1.png", "images/game7-2.png", "images/game7-3.png"]'>
-                <img class="carousel-image" src="images/game7-1.png" alt="Screenshot 1">
-                <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
-                <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
-            </div>
-            <h3>Antopocalypse</h3>
-            <p>
-                Antpocalypse is a pixel-art tower defense game where players command a determined colony of black ants fighting for survival against waves of invading insects. 
-                From hungry red ants to monstrous beetles, threats grow deadlier with each level. Your mission? Fortify your nest, evolve your ant warriors, and protect the heart 
-                of the colony, the Ant Queen at all costs.
-
-            </p>
-            <a href="https://viditm.itch.io/antopocalypse">Play Now</a>
-        </div>
-
-        <div class="project">
-            <div class="carousel" data-images='["images/game5-1.png", "images/game5-2.png", "images/game5-3.png"]'>
-                <img class="carousel-image" src="images/game5-1.png" alt="Screenshot 1">
-                <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
-                <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
-            </div>
-            <h3>Unreal Engine – Forest Environment</h3>
-            <p>Created a Procedurally Generated Forest Environment. Set Up the Lighting and Materials and even used blueprints to create fog cards and camera shake.</p>
-        </div>
-
-        <div class="project">
-            <div class="carousel" data-images='["images/game6-1.png", "images/game6-2.png", "images/game6-3.png"]'>
-                <img class="carousel-image" src="images/game6-1.png" alt="Screenshot 1">
-                <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
-                <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
-            </div>
-            <h3>Unreal Engine – Secret Valley</h3>
-            <p>Created a Valley/Cave using modular assets, set up a water material and fog cards and also made water caustics.</p>
+        <div class="hero-buttons">
+            <a href="works.html" class="cta-button">See My Projects</a>
+            <a href="about.html" class="cta-button">About</a>
+            <a href="extras.html" class="cta-button">Extras</a>
+            <a href="contact.html" class="cta-button">Contact</a>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:viditmodi05@gmail.com">viditmodi05@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/ViditModi05" target="_blank">GitHub</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/vidit-modi-48737b263/" target="_blank">LinkedIn</a></p>
-    </section>
-
-    <footer>
-        <p>© 2025 Vidit Modi. All rights reserved.</p>
+    <footer class="fade-in">
+        <p>&copy; 2025 Vidit Modi. All rights reserved.</p>
     </footer>
-    <script>
-        document.querySelectorAll('.carousel').forEach(carousel => {
-            const imgTag = carousel.querySelector('.carousel-image');
-            const images = JSON.parse(carousel.dataset.images);
-            let index = 0;
-
-            function showSlide(delta) {
-                index = (index + delta + images.length) % images.length;
-                imgTag.src = images[index];
-            }
-
-            carousel.querySelector('.prev').addEventListener('click', () => showSlide(-1));
-            carousel.querySelector('.next').addEventListener('click', () => showSlide(1));
-        });
-    </script>
 </body>
 </html>

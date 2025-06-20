@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extras | Vidit Modi</title>
+    <link rel="stylesheet" href="styles/stylesheet.css" />
+</head>
+<body>
+    <header class="fade-in">
+        <h1>Vidit Modi</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="works.html">Works</a>
+            <a href="extras.html">Extras</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="extras-container fade-in">
+        <h2>🖼️ Artworks & VFX</h2>
+
+        <div class="extras-grid">
+            <!-- Extra Item 1 -->
+            <div class="extras-card">
+                <div class="extras-carousel" data-images='["images/extras1-1.jpg", "images/extras1-2.jpg", "images/extras1-3.jpg"]'>
+                    <img src="images/extras1-1.jpg" class="active" alt="Cave Environment" />
+                    <button class="extras-carousel-btn prev">&#10094;</button>
+                    <button class="extras-carousel-btn next">&#10095;</button>
+                </div>
+                <h3>Cave Environment</h3>
+                <span class="badge">🏞️ Environment Design</span>
+            </div>
+
+            <!-- Extra Item 2 -->
+            <div class="extras-card">
+                <div class="extras-carousel" data-images='["images/extras2-1.png", "images/extras2-2.png", "images/extras2-3.png"]'>
+                    <img src="images/extras2-1.png" class="active" alt="Indian Forest" />
+                    <button class="extras-carousel-btn prev">&#10094;</button>
+                    <button class="extras-carousel-btn next">&#10095;</button>
+                </div>
+                <h3>Indian Forest</h3>
+                <span class="badge">🌲 Procedural Generation</span>
+            </div>
+
+            <!-- Extra Item 3 -->
+            <div class="extras-card">
+                <div class="extras-carousel" data-images='["images/extras3-1.png", "images/extras3-2.png", "images/extras3-3.png"]'>
+                    <img src="images/extras3-1.png" class="active" alt="Ravine" />
+                    <button class="extras-carousel-btn prev">&#10094;</button>
+                    <button class="extras-carousel-btn next">&#10095;</button>
+                </div>
+                <h3>Ganesha</h3>
+                <span class="badge">🏞️ Environment Design</span>
+            </div>
+
+            <!-- Extra Item 4 -->
+            <div class="extras-card">
+                <div class="extras-carousel" data-images='["images/extras4-1.jpg", "images/extras4-2.jpg", "images/extras4-3.png"]'>
+                    <img src="images/extras4-1.jpg" class="active" alt="Dwayne Johnson" />
+                    <button class="extras-carousel-btn prev">&#10094;</button>
+                    <button class="extras-carousel-btn next">&#10095;</button>
+                </div>
+                <h3>Dwayne Johnson</h3>
+                <span class="badge">🗿 Character Sculpt</span>
+            </div>
+
+            <!-- Extra Item 5 -->
+            <div class="extras-card">
+                <div class="extras-carousel" data-images='["images/extras5-1.png", "images/extras5-2.png", "images/extras5-3.png"]'>
+                    <img src="images/extras5-1.png" class="active" alt="Cybernetic Warrior" />
+                    <button class="extras-carousel-btn prev">&#10094;</button>
+                    <button class="extras-carousel-btn next">&#10095;</button>
+                </div>
+                <h3>Cybernetic Warrior</h3>
+                <span class="badge">🤖 Character Sculpt</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="fade-in">
+        <p>&copy; 2025 Vidit Modi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.extras-carousel').forEach(carousel => {
+            const images = JSON.parse(carousel.dataset.images);
+            const imgTag = carousel.querySelector('img');
+            let index = 0;
+
+            carousel.querySelector('.prev').addEventListener('click', () => {
+                index = (index - 1 + images.length) % images.length;
+                imgTag.src = images[index];
+            });
+
+            carousel.querySelector('.next').addEventListener('click', () => {
+                index = (index + 1) % images.length;
+                imgTag.src = images[index];
+            });
+        });
+    </script>
+</body>
+</html>
