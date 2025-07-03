@@ -329,6 +329,27 @@ footer {
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
 }
 
+.project-btn-container {
+    margin-top: 12px;
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #00ffff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.project-card:hover .project-btn {
+    background-color: #00cccc;
+    transform: scale(1.05);
+}
+
 .meta-block {
     margin-bottom: 20px;
 }
