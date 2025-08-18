@@ -14,6 +14,7 @@
         gtag('config', 'G-79E9K20R7L');
     </script>
     <link rel="stylesheet" href="styles/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="fade-in">
@@ -27,19 +28,24 @@
     </header>
 
     <section class="hero fade-in slide-in-left">
-        <h2>Hi, I'm Vidit Modi</h2>
-        <p>Game Developer | Unity | Unreal | Technical Artist</p>
+        <div class="game-scene">
+            <!-- Character -->
+            <div id="character"></div>
 
-        <div class="hero-buttons">
-            <a href="works.html" class="cta-button">See My Projects</a>
-            <a href="about.html" class="cta-button">About</a>
-            <a href="extras.html" class="cta-button">Extras</a>
-            <a href="contact.html" class="cta-button">Contact</a>
+            <!-- Menu options (hidden at start) -->
+            <div class="welcome-text">Welcome!</div>
+            <div class="menu-options">
+                <a href="works.html" class="menu-btn">Projects</a>
+                <a href="about.html" class="menu-btn">About</a>
+                <a href="extras.html" class="menu-btn">Extras</a>
+                <a href="contact.html" class="menu-btn">Contact</a>
+            </div>
         </div>
     </section>
 
     <footer class="fade-in">
         <p>&copy; 2025 Vidit Modi. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
