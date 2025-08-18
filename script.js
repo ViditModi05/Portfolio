@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Show welcome text above menu
             const welcomeText = document.querySelector(".welcome-text");
             if (welcomeText) {
-                welcomeText.style.display = "block"; // make sure it's visible
+                welcomeText.style.display = "absolute"; // make sure it's visible
                 welcomeText.style.textAlign = "center"; // center it
                 welcomeText.style.marginBottom = "20px"; // spacing above buttons
             }
