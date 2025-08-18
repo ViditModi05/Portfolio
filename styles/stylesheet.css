@@ -26,28 +26,27 @@ header {
 /* Game Scene */
 .game-scene {
     position: relative;
-    width: 100%;
-    max-width: 1200px; /* keep your original max width */
-    height: auto;
-    aspect-ratio: 16/9; /* keeps the shape */
+    width: 100%; /* full width of screen */
+    max-width: 1200px; /* optional max width */
+    height: auto; /* height scales with image */
+    aspect-ratio: 16/9; /* maintain original ratio */
     margin: 0 auto;
     background: url("../assets/bg.png") bottom center no-repeat;
-    background-size: contain; /* ensures the bg fits without distortion */
-    min-height: 300px;
+    background-size: 100% auto; /* scale width, height adjusts */
 }
 
 
 /* Character sprite */
 #character {
     position: absolute;
-    bottom: 0; /* stick to bottom of game scene */
-    left: 5%; /* relative to container */
-    width: 20%; /* scales with container width */
-    aspect-ratio: 1/1; /* maintain square frame based on sprite */
-    height: auto; /* optional, aspect-ratio will handle height */
+    bottom: -10px; /* distance from bottom of game scene */
+    left: 100px; /* starting X inside viewport */
+    width: 256px;
+    height: 256px;
     background: url("../assets/character-sprite.png") no-repeat;
     background-size: 2048px 256px; /* 8 frames horizontally */
     animation: walkCycle 1s steps(8) infinite, walkIn 3s forwards;
+    /* Pixel art fix */
     image-rendering: pixelated;
 }
 
@@ -100,17 +99,18 @@ header {
 }
 
 .welcome-text {
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 100%; /* full width of game-scene */
-    text-align: center; /* centers text within container */
+    display: block;
     font-family: "Press Start 2P", monospace;
-    font-size: clamp(24px, 5vw, 64px);
+    font-size: 64px;
     color: #00ffff;
-    z-index: 10;
-    text-shadow: 0 0 8px #00ffff;
+    text-align: center; /* center horizontally */
+    margin: 0 auto; /* ensure it’s centered */
+    position: absolute;
+    top: 12%; /* adjust this to move it lower or higher */
+    left: 29%;
+    transform: translateX(-50%); /* perfectly center horizontally */
     animation: fadeInDown 1s ease forwards;
+    text-shadow: 0 0 8px #00ffff;
 }
 
 @keyframes fadeInDown {
@@ -213,27 +213,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-
-    #character {
-        width: 20vw;
-        height: auto;
-        left: 5vw;
-        bottom: 5vw;
-    }
-
-    .welcome-text {
-        font-size: clamp(24px, 8vw, 48px);
-        top: 8%;
-    }
-
-    .menu-options {
-        bottom: 60px;
-    }
-
-    .menu-btn {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
     nav {
         display: flex;
         flex-direction: row; 
